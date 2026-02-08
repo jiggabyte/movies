@@ -21,7 +21,6 @@
 /home/jigga/MvcMovie/obj/Debug/net10.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
 /home/jigga/MvcMovie/obj/Debug/net10.0/scopedcss/bundle/MvcMovie.styles.css
 /home/jigga/MvcMovie/obj/Debug/net10.0/scopedcss/projectbundle/MvcMovie.bundle.scp.css
-/home/jigga/MvcMovie/obj/Debug/net10.0/compressed/8151r5ozgn-{0}-lugek5hnai-lugek5hnai.gz
 /home/jigga/MvcMovie/obj/Debug/net10.0/compressed/dqa1xiugtd-{0}-61n19gt1b8-61n19gt1b8.gz
 /home/jigga/MvcMovie/obj/Debug/net10.0/compressed/6clnpnw2tb-{0}-fr7q2aak1r-fr7q2aak1r.gz
 /home/jigga/MvcMovie/obj/Debug/net10.0/compressed/gln79jq0fq-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -364,3 +363,5 @@
 /home/jigga/MvcMovie/bin/Debug/net10.0/runtimes/win-x86/native/e_sqlite3.dll
 /home/jigga/MvcMovie/obj/Debug/net10.0/MvcMovie.csproj.AssemblyReference.cache
 /home/jigga/MvcMovie/obj/Debug/net10.0/MvcMovie.csproj.Up2Date
+/home/jigga/MvcMovie/obj/Debug/net10.0/MvcMovie.sourcelink.json
+/home/jigga/MvcMovie/obj/Debug/net10.0/compressed/8151r5ozgn-{0}-yh2kwc21oi-yh2kwc21oi.gz

@@ -26,19 +26,20 @@ namespace MvcMovie.Controllers
         }
 
        // GET: Movies
-        public async Task<IActionResult> Index(string movieGenre, string searchString)
+        public async Task<IActionResult> Index(string movieGenre, string searchString, int? year)
         {
             if (_context.Movie == null)
             {
-                return Problem("Entity set 'MvcMovieContext.Movie'  is null.");
+                return Problem("Entity set 'MvcMovieContext.Movie' is null.");
             }
 
             // Use LINQ to get list of genres.
             IQueryable<string> genreQuery = from m in _context.Movie
                                             orderby m.Genre
                                             select m.Genre;
+
             var movies = from m in _context.Movie
-                        select m;
+                         select m;
 
             if (!string.IsNullOrEmpty(searchString))
             {
@@ -50,10 +51,18 @@ namespace MvcMovie.Controllers
                 movies = movies.Where(x => x.Genre == movieGenre);
             }
 
+            if (year.HasValue)
+            {
+                movies = movies.Where(m => m.ReleaseDate.Year >= year.Value);
+            }
+
             var movieGenreVM = new MovieGenreViewModel
             {
                 Genres = new SelectList(await genreQuery.Distinct().ToListAsync()),
-                Movies = await movies.ToListAsync()
+                Movies = await movies.ToListAsync(),
+                SearchString = searchString,
+                MovieGenre = movieGenre,
+                Year = year
             };
 
             return View(movieGenreVM);

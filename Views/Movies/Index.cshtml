@@ -11,13 +11,23 @@
 </p>
 <form asp-controller="Movies" asp-action="Index" method="get">
     <p>
-
-        <select asp-for="MovieGenre" asp-items="Model.Genres">
-            <option value="">All</option>
+        <select asp-for="MovieGenre" asp-items="Model.Genres" class="form-control">
+            <option value="">All Genres</option>
         </select>
 
-        <label>Title: <input type="text" asp-for="SearchString" /></label>
-        <input type="submit" value="Filter" />
+        <label>Title: <input type="text" asp-for="SearchString" class="form-control" /></label>
+
+        <label>Year: 
+            <select asp-for="Year" class="form-control">
+                <option value="">All Years</option>
+                @for (int year = DateTime.Now.Year; year >= 1900; year--)
+                {
+                    <option value="@year">@year</option>
+                }
+            </select>
+        </label>
+
+        <input type="submit" value="Filter" class="btn btn-primary" />
     </p>
 </form>
 
